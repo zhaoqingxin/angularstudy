@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+    <p ng-click="console()">click me</p>
+</body>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module('App',[]);
+    app.controller('todoController',['$scope',function($scope){
+        $scope.console = function(){
+            var str = 'ABcdE';
+            console.log(angular.lowercase(str));
+            console.log(angular.uppercase(str));
+            console.log(angular.uppercase({name:'WANG'}));//不起作用
+        }
+    }]);
+</script>
+</html>

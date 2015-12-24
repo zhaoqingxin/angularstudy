@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+<p ng-click="console()">click me</p>
+</body>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module('App',[]);
+    app.controller('todoController',['$scope',function($scope){
+        $scope.console = function(){
+            var arr = ['a','b','c'];
+            var json = {
+                one:1,
+                tow:2,
+                three:3
+            };
+            angular.forEach(arr,function(item,index,obj){
+                //item迭代的value，index索引,obj===arr
+                console.log(index+'---'+item);
+                console.log(obj===arr);
+            })
+            angular.forEach(json,function(value,key,obj){
+                //value,key,obj===json
+                console.log(key+'---'+value);
+                console.log(obj===json);
+            })
+        }
+    }]);
+</script>
+</html>

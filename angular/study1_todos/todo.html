@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <style>
+        .active{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+    <h1>TODOS</h1>
+    <p>{{todoList.remain()}} of {{todoList.todos.length}} remaining</p>
+    <ul class="list-group">
+        <li ng-repeat="todo in todoList.todos" class="list-group-item">
+            <input type="checkbox" ng-model="todo.done"/>
+            <span ng-class="todo.done?'active':''"  ng-bind="todo.text"></span>
+        </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+        <input type="text" placeholder="add new todo" ng-model="todoList.todoText" ng-keydown="todoList.add($event)"/>
+        <button class="btn btn-primary btn-sm">add</button>
+    </form>
+</body>
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="todos.js"></script>
+</html>

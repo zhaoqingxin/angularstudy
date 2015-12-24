@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+<p ng-click="console()">click me</p>
+</body>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module('App',[]);
+    app.controller('todoController',['$scope',function($scope){
+        //
+        $scope.user = {name : "赵庆馨"};
+        $scope.person={};
+        $scope.console = function(){
+
+            angular.copy($scope.user,$scope.person);
+            console.log($scope.user);
+            console.log($scope.person);
+        }
+        var user ={name : "赵庆馨"};
+        var person={};
+        angular.copy(user,person);
+        console.log(user);
+        console.log(person);
+    }]);
+</script>
+</html>

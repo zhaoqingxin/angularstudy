@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+<p ng-click="console()">click me</p>
+</body>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module('App',[]);
+    app.controller('todoController',['$scope',function($scope){
+        //我实验成功不了
+        $scope.console=function(){
+            console.log(this.name)
+        };
+        $scope.json={
+            name:'赵庆馨'
+        };
+        var person = {
+            name:'zhao'
+        };
+        angular.bind(person,$scope.console,['eat','drink']);
+        $scope.console();
+    }]);
+</script>
+</html>
