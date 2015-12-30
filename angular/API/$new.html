@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="superCache">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular API derective</title>
+</head>
+<body ng-controller="myController">
+<a href="">{{code}}</a>
+</body>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    angular.module('superCache',[]);
+    angular.module('superCache').controller('myController',['$rootScope',function($rootScope){
+        $rootScope.name='zhao';
+       var newScope = $rootScope.$new();
+        console.log(newScope.name);
+
+        $rootScope.angry='very';
+        console.log(newScope.angry);
+
+        newScope.age=33;
+        console.log($rootScope.age);
+    }])
+
+</script>
+</html>

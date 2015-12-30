@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular API</title>
+</head>
+<body>
+</body>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    var obj1 = {
+        name:'zhao',
+        age:33
+    };
+    var obj2 = {
+        name:'zhao',
+        age:33
+    };
+    var obj3 = {
+        name:'wang',
+        age:99
+    };
+    var arr1 = [1,2,3,'a'];
+    var arr2 = [1,2,'3','a'];
+    var str1 = 'zhao';
+    var str2 = 'zhaq';
+    console.log(angular.equals(obj1,obj2));
+    console.log(angular.equals(obj2,obj3));
+    console.log(angular.equals(arr1,arr2));
+    console.log(angular.equals(str1,str2));
+</script>
+</html>

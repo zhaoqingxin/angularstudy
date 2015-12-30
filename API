@@ -1,43 +1,10 @@
-#通过官网api,git和源码，学习angular
-#学习angular插件
 
 #angular-API（v1.3.9）
 
-#通过文献认识angular应用中的组件，组件包括directives指令, services服务, filters过滤器, providers, templates模板, global APIs全局API, and testing mocks测试.
+总结学习angular应用中的组件，组件包括directives指令, services服务, filters过滤器, providers, templates模板, global APIs全局API, and testing mocks测试.
 
-#ng(核心模块)——AngularJS提供的核心模块
-> Directives
-- 这是核心指令的集合，你可以使用在模板代码中来建立angular应用，比如：ngClick,ngRepeat等
-
-> Services/Factories
-- 这是核心服务的集合，在你的应用中提供服务，比如$http,$compile,$location等
-
-- Filters
-- 过滤器在模块中用于在渲染之前转化模板数据，比如filter,date,currency,lowercase,uppercase等
-
-- Global API
-- 核心全局函数附在angular对象上（angular的属性），在应用程序中帮助js操作，比如angular.copy(),angular.equals()等。
-
-#ngRoute
-- ngRoute用于在你的应用程序中的路由，支持通过哈希和HTML5的pushState来管理URL。需要引入angular-route.js 
-- Services/Factories——下面的服务用于路由管理
-- $routeParams 用于允许在URL中查询字符串值（参数）
-- $route 用于路由详细信息
-- $routeProvider 用于在应用程序中注册路由
-
-- Directives 
-- 当前路由的页面模板会在ngView指令中显示
-
-- 提示：现在已经没人使用ngRoute了，比较流行的路由管理是uiRoute
-
-#ngAnimate
-- 允许在你的应用中使用动画，动画通过CSS transitions/animations 或者 JavaScript回调定义，需要引入angular-animate.js.
-- Services / Factories	在你的指令代码中用$animate触发动画操作。
-- CSS-based animations	在Angular中引用 CSS transitions / keyframe animations。一旦被定义,动画可以通过在HTML模板代码中引用css的class被触发。
-- JS-based animations	    用module.animation()注册一个JavaScript动画.一旦被定义, 动画可以通过在HTML模板代码中引用css的class被触发。
-
-#ngAria
-- 用ngAria在指令和注入通用可访问的属性
+ng(核心模块)——AngularJS提供的核心模块
+Directives
 
 
 #angular提供的function（感觉整体用处不大）
@@ -155,3 +122,6 @@
 - script
 - select
 - textarea
+
+
+

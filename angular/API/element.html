@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular todos</title>
+</head>
+<body ng-controller="todoController" style="margin-top: 100px; margin-left: 200px; width: 30%">
+<div id="title" class="red">i like angular</div>
+<div></div>
+<p ng-click="console()" id="btn">click me</p>
+</body>
+<!--
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+-->
+<script src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    /*
+    addClass()
+    after()
+    append()
+    attr() - Does not support functions as parameters
+    bind() - Does not support namespaces, selectors or eventData
+    children() - Does not support selectors
+    clone()
+    contents()
+    css() - Only retrieves inline-styles, does not call getComputedStyle(). As a setter, does not convert numbers to strings or append 'px', and also does not have automatic property prefixing.
+            data()
+    detach()
+    empty()
+    eq()
+    find() - Limited to lookups by tag name
+    hasClass()
+    html()
+    next() - Does not support selectors
+    on() - Does not support namespaces, selectors or eventData
+    off() - Does not support namespaces, selectors or event object as parameter
+    one() - Does not support namespaces or selectors
+    parent() - Does not support selectors
+    prepend()
+    prop()
+    ready()
+    remove()
+    removeAttr()
+    removeClass()
+    removeData()
+    replaceWith()
+    text()
+    toggleClass()
+    triggerHandler() - Passes a dummy event object to handlers.
+            unbind() - Does not support namespaces or event object as parameter
+    val()
+    wrap()
+    */
+    var app = angular.module('App',[]);
+    app.controller('todoController',['$scope',function($scope){
+
+    }]);
+    console.log(angular.element('<div class="abc" id="box">zhao</div>').attr('id'));
+    console.log(angular.element('<div class="abc btn" id="box">zhao</div>').attr('class'));
+    var aDiv=document.querySelectorAll('div');
+    console.log(angular.element(document).find('div'));
+    console.log(angular.element(aDiv).find('.red'));
+    //angular.element不能获取页面的内容，用在自定义指令的Link函数里还是可以的
+</script>
+</html>
